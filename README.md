@@ -23,9 +23,8 @@ It then breaks this into distinct **cognitive layers** — perception, decision,
 ---
 
 ## 🔁 Flow of Execution
-User Query → Perception → Decision → Action → Output File
-↘
-Memory (Preferences)
+Perceive → Remember → Decide → Act 
+Orchestration happens in main.py
 
 
 ### Example Flow
