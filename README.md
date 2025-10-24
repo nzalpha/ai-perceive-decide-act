@@ -84,15 +84,15 @@ This modular setup makes it easy to **extend** — for example, adding a *verifi
 uv venv
 source .venv/bin/activate
 
-## 3. Install dependencies
+3. **Install dependencies**
 uv pip install -r requirements.txt
 
-## 4. Add your Gemini API key to a .env file
+4. **Add your Gemini API key to a .env file**
 GEMINI_API_KEY=your_api_key_here
 
-## 5. Run the main file
+5. **Run the main file**
 uv run main.py
 
-## 6.Check output
+6. **Check output**
 Logs will appear in the terminal
 Updated PowerPoint file saved as output.pptx
