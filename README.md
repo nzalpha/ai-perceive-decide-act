@@ -80,7 +80,7 @@ This modular setup makes it easy to **extend** — for example, adding a *verifi
    git clone https://github.com/nzalpha/ascii-agent.git
    cd ascii-agent
 
-## 2. Create and activate a virtual environment
+2. **Create and activate a virtual environment** 
 uv venv
 source .venv/bin/activate
 
