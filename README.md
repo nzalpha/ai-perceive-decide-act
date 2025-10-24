@@ -27,18 +27,33 @@ Perceive → Remember → Decide → Act
 Orchestration happens in main.py
 
 
-### Example Flow
-1. **User Query**: “Find ASCII values of characters in AMERICA, calculate sum of exponentials, and add result to input.pptx.”
-2. **Perception**: Extracts:
-   - “Find ASCII values”
-   - “Calculate sum of exponentials”
+### 🧩 Example Flow
+
+1. **User Query**:  
+   “Find ASCII values of characters in AMERICA, calculate sum of exponentials, and add result to input.pptx.”
+
+2. **Perception**:  
+   Analyzes the query and extracts actionable facts:  
+   - “Find ASCII values”  
+   - “Calculate sum of exponentials”  
    - “Add result to PowerPoint”
-3. **Decision**: Determines correct tool sequence:
-   - Call `get_ascii_values("AMERICA")`
-   - Pass results to `calculate_exponential_sum()`
-   - Use `add_rectangle_to_ppt()` to insert result into `input.pptx`
-4. **Action**: Executes tools and saves `output.pptx`
-5. **Main**: Logs steps and ensures graceful termination after task completion.
+
+3. **Memory**:  
+   Retrieves stored user preferences (such as font color, background color, and slide layout) from a list in `memory.py`.  
+   These preferences are later used to style and format the PowerPoint output — for example, applying a blue font color or red background based on saved preferences.
+
+4. **Decision**:  
+   Combines the perceived facts and memory-based preferences to determine the correct tool sequence:  
+   - Call `get_ascii_values("AMERICA")`  
+   - Pass results to `calculate_exponential_sum()`  
+   - Use `add_rectangle_to_ppt()` to insert the computed result into `input.pptx`, styled according to memory preferences.
+
+5. **Action**:  
+   Executes the chosen tools and saves the final PowerPoint as `output.pptx`, applying the preferences retrieved from memory (e.g., blue font, red background).
+
+6. **Main**:  
+   Orchestrates all layers, logs progress, and ensures graceful termination after task completion.
+
 
 ---
 
